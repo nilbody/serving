@@ -13,6 +13,10 @@ node_modules
 /third_party/py/numpy/numpy_include
 /util/python/python_include
 /util/python/python_lib
+*.iml
+.idea/
+/experimen_demo/javawrapper/.idea
+
 *.py[cod]
 *.so
 *.egg

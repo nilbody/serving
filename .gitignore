@@ -16,7 +16,7 @@ node_modules
 *.iml
 .idea/
 /experimen_demo/javawrapper/.idea
-
+.DS_Store
 *.py[cod]
 *.so
 *.egg

@@ -31,8 +31,8 @@ limitations under the License.
 // BatchingSession at:
 //     tensorflow_serving/batching/batching_session.h
 //
-// To serve a single model, run with:
 //     $path_to_binary/tensorflow_model_server \
+// To serve a single model, run with:
 //     --model_base_path=[/tmp/my_model | gs://gcs_address]
 // IMPORTANT: Be sure the base path excludes the version directory. For
 // example for a model at /tmp/my_model/123, where 123 is the version, the base

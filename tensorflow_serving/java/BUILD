@@ -1,6 +1,7 @@
 package(default_visibility = ["//visibility:private"])
 
 load(":build_defs.bzl", "JAVACOPTS")
+load("@org_tensorflow//tensorflow:tensorflow.bzl", "tf_cc_binary")
 
 config_setting(
     name = "debug",
@@ -9,7 +10,6 @@ config_setting(
     },
     visibility = ["//visibility:public"],
 )
-
 
 java_library(
     name = "java_serving",
@@ -24,14 +24,13 @@ java_library(
 filegroup(
     name = "java_sources",
     srcs = glob([
-        "src/main/java/com/vv/*.java",
-        "src/main/java/com/vv/**/*.java",
+        "src/main/java/com/bt/*.java",
+        "src/main/java/com/bt/**/*.java",
     ]),
     visibility = [
         "//tensorflow_serving/java:__pkg__",
     ],
 )
-
 
 filegroup(
     name = "libtensorflow_jni",
@@ -72,14 +71,12 @@ tf_cc_binary(
     ],
 )
 
-
-
 genrule(
     name = "pom",
     outs = ["pom.xml"],
     cmd = "$(location generate_pom) >$@",
     output_to_bindir = 1,
-    tools = [":generate_pom"], # + tf_binary_additional_srcs(),
+    tools = [":generate_pom"],  # + tf_binary_additional_srcs(),
 )
 
 tf_cc_binary(

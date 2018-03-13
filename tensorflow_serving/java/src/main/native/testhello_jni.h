@@ -11,7 +11,7 @@
 extern "C" {
 #endif
 
-JNIEXPORT void JNICALL Java_com_bt_tstdemo_testHello(JNIEnv *, jclass, jstring);
+JNIEXPORT jstring JNICALL Java_com_bt_tstdemo_testHello(JNIEnv *, jclass, jstring);
 
 
 #ifdef __cplusplus
